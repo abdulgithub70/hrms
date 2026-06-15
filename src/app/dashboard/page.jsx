@@ -122,7 +122,7 @@ console.log("Dashboard - loggedInUserId:", loggedInUserId, "| Role:", loggedInUs
     
 
     return (
-        <div className="min-h-screen p-4 bg-gray-100 h-auto">
+        <div className="min-h-screen p-1 rounded-lg bg-gray-100 h-auto">
 
             
 
@@ -177,7 +177,7 @@ console.log("Dashboard - loggedInUserId:", loggedInUserId, "| Role:", loggedInUs
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
 
                 {/* Column 1 — Attendance widget + Chat */}
-                <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4">
+                <div className="bg-gray-100 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4">
                     <Attendance
                         loggedInUserId={loggedInUserId}
                         loggedInUserName={loggedInUserName}
@@ -198,11 +198,11 @@ console.log("Dashboard - loggedInUserId:", loggedInUserId, "| Role:", loggedInUs
                 </div>
 
                 {/* Column 2 — Attendance records (scrollable list, fixed-height card) */}
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[420px]">
-                    <div className="px-4 py-3 border-b border-slate-200 flex-shrink-0">
+                <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[330px]">
+                    <div className="px-4 py-2 border-b border-slate-200 flex-shrink-0">
                         <h2 className="text-sm font-medium text-slate-800">Attendance records</h2>
                     </div>
-                    <div className="flex-1 overflow-y-auto px-4 py-3">
+                    <div className="flex-1 overflow-y-auto">
                         <AttendanceList
                             loggedInUserId={loggedInUserId}
                             loggedInUserName={loggedInUserName}
@@ -212,11 +212,11 @@ console.log("Dashboard - loggedInUserId:", loggedInUserId, "| Role:", loggedInUs
                 </div>
 
                 {/* Column 3 — Notice board (scrollable list, fixed-height card) */}
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[420px]">
+                <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[330px]">
                     <div className="px-4 py-3 border-b border-slate-200 flex-shrink-0">
                         <h2 className="text-sm font-medium text-slate-800">Notice board</h2>
                     </div>
-                    <div className="flex-1 overflow-y-auto px-4 py-3">
+                    <div className="flex-1 overflow-y-auto px- py-1">
                         <NoticeBoard
                             role={loggedInUserRole}
                             userName={loggedInUserName}

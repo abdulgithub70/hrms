@@ -125,7 +125,7 @@ export default function AttendanceList({ loggedInUserId, loggedInUserName, role 
                     </div>
                 </Card>
             ) : (
-                <Card className="bg-white shadow-md mt-6">
+                <Card className="bg-white shadow-md">
                     <CardHeader>
                         <CardTitle className="text-lg font-semibold flex items-center gap-2">
                             🗓 Attendance Records (Admin)

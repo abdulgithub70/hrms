@@ -52,11 +52,14 @@ export default function AppShell({ children }) {
             {/* Sidebar */}
             <aside
                 className={`bg-white border-r border-slate-200 transition-all duration-300 overflow-hidden
-    ${open ? "w-54" : "w-12"}`}
+    w-12
+    ${open ? "md:w-54" : "md:w-12"}`}
             >
                 {/* Logo + Toggle */}
                 <div className="h-16 flex items-center justify-between px-2 border-b">
-                    {open && <span className="font-bold whitespace-nowrap">My App</span>}
+                    <span className="font-bold whitespace-nowrap hidden md:inline">
+                        {open && "My App"}
+                    </span>
                     <button
                         onClick={() => setOpen(!open)}
                         className="text-sm px-2 py-1 border rounded flex-shrink-0"
@@ -76,18 +79,18 @@ export default function AppShell({ children }) {
                         {open && <span>Employees</span>}
                     </Link>
                     
-                    <Link href="/Attendance" className="block p-2 rounded hover:bg-slate-100">📥 
+                    <Link href="/Attendance" className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 whitespace-nowrap">📥 
                         {open && <span>Attendance</span>}
                     </Link>
-                    <Link href="/leave" className="block p-2 rounded hover:bg-slate-100">🗓️ {open && <span className="">Leave</span>}</Link>
-                    <Link href="/chat" className="block p-2 rounded hover:bg-slate-100">💬 {open && <span>Chat</span>}</Link>
+                    <Link href="/leave" className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 whitespace-nowrap">🗓️ {open && <span className="">Leave</span>}</Link>
+                    <Link href="/chat" className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 whitespace-nowrap">💬 {open && <span>Chat</span>}</Link>
                    
-                    <Link href="/reports" className="block p-2 rounded hover:bg-slate-100">📊 {open && <span>Reports</span>}</Link>
+                    <Link href="/reports" className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 whitespace-nowrap">📊 {open && <span>Reports</span>}</Link>
                     
                     {loggedInUserRole === "admin" && (
                         <Link
                             href="/Settings"
-                            className="block p-2 rounded hover:bg-slate-100"
+                            className="flex items-center gap-2 p-2 rounded hover:bg-slate-100 whitespace-nowrap"
                         >
                             ⚙ {open && <span>Settings</span>}
                         </Link>
@@ -123,7 +126,7 @@ export default function AppShell({ children }) {
                 </header>
 
                 {/* Page Content */}
-                <main className="p-6 overflow-auto">
+                <main className="overflow-auto">
                     {children}
 
                 </main>
