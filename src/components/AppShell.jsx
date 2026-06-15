@@ -52,7 +52,7 @@ export default function AppShell({ children }) {
             {/* Sidebar */}
             <aside
                 className={`bg-white border-r border-slate-200 transition-all duration-300 overflow-hidden
-    w-12
+    w-11
     ${open ? "md:w-54" : "md:w-12"}`}
             >
                 {/* Logo + Toggle */}
