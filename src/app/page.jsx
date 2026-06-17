@@ -25,9 +25,7 @@ export default function Home() {
           HR Management System
         </p>
         <div className="flex gap-4">
-          <a href="/register" className="bg-blue-500 px-6 py-2.5 rounded-lg hover:bg-blue-600 transition-colors font-medium text-sm">
-            Add Employee
-          </a>
+          
           <a href="/login" className="bg-green-500 px-6 py-2.5 rounded-lg hover:bg-green-600 transition-colors font-medium text-sm">
             Login
           </a>
@@ -35,5 +33,5 @@ export default function Home() {
       </div>
 
     </div>
-  );
+  );  
 }
