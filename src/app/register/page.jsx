@@ -8,6 +8,7 @@ import { UserPlus, UserCheck } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
     const [formData, setFormData] = useState({
@@ -21,6 +22,8 @@ export default function RegisterPage() {
         salary: "",
         joiningDate: ""
     });
+
+    const router = useRouter();
 
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 

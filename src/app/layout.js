@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import Providers from "@/components/Provider";
+import OfficeBell from "@/components/OfficeBell";
 
 //import App from "next/app";
 const geistSans = Geist({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <Toaster richColors position="top-right" />
         
         <Providers>
+          <OfficeBell />  {/* 👈 bas yeh add karo */}
           {children}
         </Providers>
         
