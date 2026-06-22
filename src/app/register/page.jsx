@@ -33,7 +33,7 @@ export default function RegisterPage() {
 
 
     useEffect(() => {
-        fetch(`${apiUrl}/health`).catch(() => { });
+        fetch(`https://hrms-bk.onrender.com/health`).catch(() => { });
     }, []);
 
 
