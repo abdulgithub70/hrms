@@ -200,7 +200,7 @@ console.log("Dashboard - loggedInUserId:", loggedInUserId, "| Role:", loggedInUs
                 {/* Column 2 — Attendance records (scrollable list, fixed-height card) */}
                 <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[330px]">
                     <div className="px-4 py-2 border-b border-slate-200 flex-shrink-0">
-                        <h2 className="text-sm font-medium text-slate-800">Attendance records</h2>
+                        <h2 className="text-sm font-medium text-slate-800">Notice Board</h2>
                     </div>
                     <div className="flex-1 overflow-y-auto">
                         
@@ -214,7 +214,7 @@ console.log("Dashboard - loggedInUserId:", loggedInUserId, "| Role:", loggedInUs
                 {/* Column 3 — Notice board (scrollable list, fixed-height card) */}
                 <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[330px]">
                     <div className="px-4 py-3 border-b border-slate-200 flex-shrink-0">
-                        <h2 className="text-sm font-medium text-slate-800">Notice board</h2>
+                        <h2 className="text-sm font-medium text-slate-800">Attendance Records</h2>
                     </div>
                     <div className="flex-1 overflow-y-auto px- py-1">
                         
